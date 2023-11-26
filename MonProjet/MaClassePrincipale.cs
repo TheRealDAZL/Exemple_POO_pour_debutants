@@ -178,10 +178,10 @@ namespace MonProjet
 
 
 
-            /* TECHNIQUE 3 : À L'AIDE DU MAIN ET D'UNE CLASSE NON-STATIQUE */
+            /* TECHNIQUE 3 : À L'AIDE DE LA MÉTHODE MAIN ET D'UNE CLASSE NON-STATIQUE */
 
             // Afficher ce message
-            Console.WriteLine("\n\n*** TECHNIQUE 3 : À L'AIDE DU MAIN ET D'UNE CLASSE NON-STATIQUE ***");
+            Console.WriteLine("\n\n*** TECHNIQUE 3 : À L'AIDE DE LA MÉTHODE MAIN ET D'UNE CLASSE NON-STATIQUE ***");
 
             // Déclarer, puis instancier un objet de la classe MaClasseNonStatique
             MaClasseNonStatique objet = new MaClasseNonStatique();
@@ -196,7 +196,7 @@ namespace MonProjet
             // Afficher le 2ième message prédéfini, de même que le nombre saisi précédement
             objet.AffichageDuTexte3(nombre3);
 
-            /* TECHNIQUE 3 : À L'AIDE DU MAIN ET D'UNE CLASSE NON-STATIQUE */
+            /* TECHNIQUE 3 : À L'AIDE DE LA MÉTHODE MAIN ET D'UNE CLASSE NON-STATIQUE */
 
 
 
