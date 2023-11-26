@@ -69,14 +69,14 @@ namespace MonProjet
             /* TECHNIQUE 1 : À L'AIDE DE LA MÉTHODE MAIN UNIQUEMENT */
 
             // Afficher ce message
-            Console.WriteLine("\n\n\n*** TECHNIQUE 1 : À L'AIDE DE LA MÉTHODE MAIN UNIQUEMENT ***");
+            Console.WriteLine("\n\n*** TECHNIQUE 1 : À L'AIDE DE LA MÉTHODE MAIN UNIQUEMENT ***");
 
             // Déclarer et initialiser les string[] de messages prédéfinis
             string[] MESSAGES_NORMAUX = ["Entrez un nombre entier à afficher. Ce nombre doit être différent de 0 :",
                                          "Le nombre qui a été entré puis validé est :"];
-            string[] MESSAGES_DERREUR = ["Cette entrée n'est pas valide. Entrez un nombre entier différent de 0.",
+            string[] MESSAGES_DERREUR = ["Cette entrée n'est pas valide. Entrez un nombre entier différent de 0 :",
                                          "Ce nombre est trop large. Entrez un nombre de -2147483648 (Int32.MinValue) " +
-                                         "à 2147483647 (Int32.MaxValue)."];
+                                         "à 2147483647 (Int32.MaxValue) :"];
 
             // Afficher le 1er message prédéfini
             AffichageDuMessage(MESSAGES_NORMAUX[0]);
@@ -152,39 +152,39 @@ namespace MonProjet
 
 
 
-            /* TECHNIQUE 2 : À L'AIDE DU MAIN ET DE MÉTHODES STATIQUES */
+            /* TECHNIQUE 2 : À L'AIDE DE LA MÉTHODE MAIN ET D'UNE CLASSE STATIQUE */
 
             // Afficher ce message
-            Console.WriteLine("\n\n\n*** TECHNIQUE 2 : À L'AIDE DE MÉTHODES STATIQUES ***");
+            Console.WriteLine("\n\n*** TECHNIQUE 2 : À L'AIDE DE MÉTHODES STATIQUES ***");
 
             // Déclarer et initialiser les string[] de messages prédéfinis
             string[] MESSAGES_NORMAUX_2 = ["Entrez un nombre entier à afficher. Ce nombre doit être différent de 0 :",
                                            "Le nombre qui a été entré puis validé est :"];
-            string[] MESSAGES_DERREUR_2 = ["Cette entrée n'est pas valide. Entrez un nombre entier différent de 0.",
+            string[] MESSAGES_DERREUR_2 = ["Cette entrée n'est pas valide. Entrez un nombre entier différent de 0 :",
                                            "Ce nombre est trop large. Entrez un nombre de -2147483648 (Int32.MinValue) " +
-                                           "à 2147483647 (Int32.MaxValue)."];
+                                           "à 2147483647 (Int32.MaxValue) :"];
 
             // Afficher le 1er message prédéfini
-            AffichageDuMessage2(MESSAGES_NORMAUX_2[0]);
+            MaClasseStatique.AffichageDuMessage2(MESSAGES_NORMAUX_2[0]);
 
             // Déclarer, puis initialiser une variable int à partir de la valeur de retour de la méthode EntreeDeNombre2.
             // Prenez note que la méthode EntreeDeNombre2 prend deux arguments sous formes de strings
-            int nombre2 = EntreeDeNombre2(MESSAGES_DERREUR_2[0], MESSAGES_DERREUR_2[1]);
+            int nombre2 = MaClasseStatique.EntreeDeNombre2(MESSAGES_DERREUR_2[0], MESSAGES_DERREUR_2[1]);
 
             // Afficher le 2ième message prédéfini, de même que le nombre saisi précédement
-            AffichageDuTexte2(MESSAGES_NORMAUX_2[1], nombre2);
+            MaClasseStatique.AffichageDuTexte2(MESSAGES_NORMAUX_2[1], nombre2);
 
-            /* TECHNIQUE 2 : À L'AIDE DU MAIN ET DE MÉTHODES STATIQUES */
+            /* TECHNIQUE 2 : À L'AIDE DE LA MÉTHODE MAIN ET D'UNE CLASSE STATIQUE */
 
 
 
-            /* TECHNIQUE 3 : À L'AIDE DU MAIN ET D'UNE AUTRE CLASSE */
+            /* TECHNIQUE 3 : À L'AIDE DU MAIN ET D'UNE CLASSE COMPLÉMENTAIRE */
 
             // Afficher ce message
-            Console.WriteLine("\n\n\n*** TECHNIQUE 3 : À L'AIDE D'UNE AUTRE CLASSE ***");
+            Console.WriteLine("\n\n*** TECHNIQUE 3 : À L'AIDE D'UNE AUTRE CLASSE ***");
 
-            // Déclarer, puis instancier un objet de la classe MaClasseComplementaire
-            MaClasseComplementaire objet = new MaClasseComplementaire();
+            // Déclarer, puis instancier un objet de la classe MaClasseNonStatique
+            MaClasseNonStatique objet = new MaClasseNonStatique();
 
             // Afficher le 1er message prédéfini
             objet.AffichageDuMessage3();
@@ -196,71 +196,15 @@ namespace MonProjet
             // Afficher le 2ième message prédéfini, de même que le nombre saisi précédement
             objet.AffichageDuTexte3(nombre3);
 
-            /* TECHNIQUE 3 : À L'AIDE DU MAIN ET D'UNE AUTRE CLASSE */
+            /* TECHNIQUE 3 : À L'AIDE DU MAIN ET D'UNE CLASSE COMPLÉMENTAIRE */
 
 
 
             // Afficher ce message
-            Console.WriteLine("\n\n\n*** FIN DE LA MÉTHODE MAIN ***");
+            Console.WriteLine("\n\n*** FIN DE LA MÉTHODE MAIN ***");
 
             /* FIN DE LA MÉTHODE MAIN */
 
-        }
-
-        // Voici la méthode statique AffichageDuMessage, qui ne retourne pas de valeur (void)
-        static void AffichageDuMessage2(string msgNormal2)
-        {
-            // Afficher le message
-            Console.WriteLine(msgNormal2);
-        }
-
-        // Voici la méthode statique EntreeDeNombre, avec un retour de nombre entier (int)
-        static int EntreeDeNombre2(string msgErreur3, string msgErreur4)
-        {
-            // Déclarer, puis initialiser la variable nbr avec la valeur 0
-            int nbr2 = 0;
-
-            // Tant que la valeur de nbr est 0, répéter la boucle suivante
-            while (nbr2 == 0)
-            {
-                // Essayer le code suivant, tant qu'on ne rencontre pas d'erreur
-                try
-                {
-                    // Changer la valeur de nbr pour la valeur entrée dans la console
-                    nbr2 = int.Parse(Console.ReadLine());
-
-                    // Si la valeur de nbr est de 0, afficher le message
-                    if (nbr2 == 0)
-                    {
-                        Console.WriteLine(msgErreur3);
-                    }
-                }
-
-                // Si on rencontre une erreur de format, afficher le message
-                catch (FormatException)
-                {
-                    Console.WriteLine(msgErreur3);
-                }
-
-                // Si on rencontre une erreur d'overflow, afficher le message
-                catch (System.OverflowException)
-                {
-                    Console.WriteLine(msgErreur4);
-                }
-            }
-
-            // Retourner la valeur de nbr
-            return nbr2;
-        }
-
-        // Voici la méthode statique AffichageDuTexte, qui ne retourne pas de valeur (void)
-        static void AffichageDuTexte2(string msgNormal2, int nbr2)
-        {
-            // Afficher le message
-            Console.WriteLine(msgNormal2);
-
-            // Afficher le nombre
-            Console.WriteLine(nbr2);
         }
     }
 }

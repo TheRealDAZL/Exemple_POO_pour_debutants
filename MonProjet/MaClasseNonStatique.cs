@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 // Espace de noms que j'ai nommé MonProjet
 namespace MonProjet
 {
-    // Classe que j'ai nommée MaClasseComplementaire
-    internal class MaClasseComplementaire
+    // Classe internal class MaClasseNonStatique
+    internal class MaClasseNonStatique
     {
         // Attributs de l'objet, soit 2 private string[] qui contiennent 2 strings chaque
         private string[] MESSAGES_NORMAUX_3 { get; set;} = new string[2];
@@ -16,14 +16,14 @@ namespace MonProjet
 
 
 
-        // Constructeur public MaClasseComplementaire(), sans argument
-        public MaClasseComplementaire()
+        // Constructeur public MaClasseNonStatique(), sans argument
+        public MaClasseNonStatique()
         {
             // Initialiser tous les éléments des 2 string[] avec les valeurs données
             MESSAGES_NORMAUX_3[0] = "Entrez un nombre entier à afficher. Ce nombre doit être différent de 0 :";
             MESSAGES_NORMAUX_3[1] = "Le nombre qui a été entré puis validé est :";
-            MESSAGES_DERREUR_3[0] = "Cette entrée n'est pas valide. Entrez un nombre entier différent de 0.";
-            MESSAGES_DERREUR_3[1] = "Ce nombre est trop large. Entrez un nombre de -2147483648 (Int32.MinValue) à 2147483647 (Int32.MaxValue).";
+            MESSAGES_DERREUR_3[0] = "Cette entrée n'est pas valide. Entrez un nombre entier différent de 0 :";
+            MESSAGES_DERREUR_3[1] = "Ce nombre est trop large. Entrez un nombre de -2147483648 (Int32.MinValue) à 2147483647 (Int32.MaxValue) :";
         }
 
 
