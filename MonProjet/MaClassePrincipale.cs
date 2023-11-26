@@ -183,7 +183,7 @@ namespace MonProjet
             // Afficher ce message
             Console.WriteLine("\n\n\n*** TECHNIQUE 3 : À L'AIDE D'UNE AUTRE CLASSE ***");
 
-            // Déclarer, puis initialiser un objet de MaClasseComplementaire
+            // Déclarer, puis instancier un objet de la classe MaClasseComplementaire
             MaClasseComplementaire objet = new MaClasseComplementaire();
 
             // Afficher le 1er message prédéfini
