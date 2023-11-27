@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// Espace de noms que j'ai nommé MonProjet
+/* Espace de noms que j'ai nommé MonProjet */
 namespace MonProjet
 {
-    // Classe internal static class MaClasseStatique
+    /* Classe internal static class MaClasseStatique */
     internal static class MaClasseStatique
     {
-        // Méthode public static void AffichageDuMessage2, qui ne retourne pas de valeur (void)
+        /* Méthode public static void AffichageDuMessage2, qui prend un string msgNormal2 comme argument et qui ne retourne pas de valeur (void) */
         public static void AffichageDuMessage2(string msgNormal2)
         {
             // Afficher le message
             Console.WriteLine(msgNormal2);
         }
 
-        // Méthode public static int EntreeDeNombre2, avec un retour de nombre entier (int)
+        /* Méthode public static int EntreeDeNombre2, qui prend un string msgErreur3 et un string msgErreur4 comme argument, et qui retourne un nombre entier (int) */
         public static int EntreeDeNombre2(string msgErreur3, string msgErreur4)
         {
             // Déclarer, puis initialiser la variable nbr avec la valeur 0
@@ -56,7 +56,7 @@ namespace MonProjet
             return nbr2;
         }
 
-        // Méthode public static void AffichageDuTexte2, qui ne retourne pas de valeur (void)
+        /* Méthode public static void AffichageDuTexte2, qui prend un string msgNormal2 et un int nbr2 comme argument, et qui ne retourne pas de valeur (void) */
         public static void AffichageDuTexte2(string msgNormal2, int nbr2)
         {
             // Afficher le message

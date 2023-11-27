@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// Espace de noms que j'ai nommé MonProjet
+/* Espace de noms que j'ai nommé MonProjet */
 namespace MonProjet
 {
-    // Classe internal class MaClasseNonStatique
+    /* Classe internal class MaClasseNonStatique */
     internal class MaClasseNonStatique
     {
-        // Attributs de l'objet, soit 2 private string[] qui contiennent 2 strings chaque
+        /* Attributs de l'objet, soit 2 private string[] qui contiennent 2 éléments chaque */
         private string[] MESSAGES_NORMAUX_3 { get; set;} = new string[2];
         private string[] MESSAGES_DERREUR_3 { get; set;} = new string[2];
 
 
 
-        // Constructeur public MaClasseNonStatique(), sans argument
+        /* Constructeur public MaClasseNonStatique(), sans argument */
         public MaClasseNonStatique()
         {
             // Initialiser tous les éléments des 2 string[] avec les valeurs données
@@ -28,14 +28,14 @@ namespace MonProjet
 
 
 
-        //  Méthode public void AffichageDuMessage3, qui ne retourne pas de valeur (void) et qui ne prend pas d'argument
+        /*  Méthode public void AffichageDuMessage3, qui ne prend pas d'argument et qui ne retourne pas de valeur (void) */
         public void AffichageDuMessage3()
         {
             // Afficher le message
             Console.WriteLine(MESSAGES_NORMAUX_3[0]);
         }
 
-        // Méthode public int EntreeDeNombre3, qui retourne un nombre entier (int) et qui ne prend pas d'argument
+        /* Méthode public int EntreeDeNombre3, qui ne prend pas d'argument et qui retourne un nombre entier (int) */
         public int EntreeDeNombre3()
         {
             // Déclarer, puis initialiser la variable nbr3 avec la valeur 0
@@ -74,7 +74,7 @@ namespace MonProjet
             return nbr3;
         }
 
-        // Méthode public void AffichageDuTexte3, qui ne retourne pas de valeur (void) et qui prend un argument nbr3 de type int
+        /* Méthode public void AffichageDuTexte3, qui prend un int nbr3 comme argument, et qui ne retourne pas de valeur (void) */
         public void AffichageDuTexte3(int nbr3)
         {
             // Afficher le message

@@ -13,8 +13,9 @@
 // Vous pouvez utiliser un espace de noms pour organiser les éléments de code et créer des types globaux uniques.
 /* INTRODUCTION AUX ESPACES DE NOMS */
 
-// Dans Visual Studio, lorsque l'on crée un nouveau projet, on crée un nouvel espace de noms (namespace)
-// Espace de noms que j'ai nommé MonProjet
+/* Dans Visual Studio, lorsque l'on crée un nouveau projet, on crée un nouvel espace de noms (namespace) */
+
+/* Espace de noms que j'ai nommé MonProjet */
 namespace MonProjet
 {
     /* INTRODUCTION AUX CLASSES */
@@ -29,7 +30,7 @@ namespace MonProjet
     // appelée garbage collection.
     /* INTRODUCTION AUX CLASSES */
 
-    // Classe que j'ai nommée MaClassePrincipale
+    /* Classe que j'ai nommée MaClassePrincipale */
     class MaClassePrincipale
     {
         /* INTRODUCTION À LA MÉTHODE STATIQUE MAIN() ET AUX ARGUMENTS DE LIGNE DE COMMANDE */
@@ -43,7 +44,7 @@ namespace MonProjet
         // spécifier quelle méthode Main utiliser comme point d'entrée.
         /* INTRODUCTION À LA MÉTHODE STATIQUE MAIN() ET AUX ARGUMENTS DE LIGNE DE COMMANDE */
 
-        // Méthode statique Main(string[] arguments)
+        /* Méthode statique Main(string[] arguments) */
         // Içi, j'ai défini la méthode pour qu'elle ne retourne aucune valeur, et pour qu'elle prenne des string[]
         // comme arguments. J'ai nommée la variable string[] arguments, pour plus de simplicité.
         // Cependant, la méthode Main peut être définie autrement, on peut définir les arguments et les valeurs
@@ -81,8 +82,7 @@ namespace MonProjet
             // Afficher le 1er message prédéfini
             AffichageDuMessage(MESSAGES_NORMAUX[0]);
 
-            // Déclarer, puis initialiser une variable int à partir de la valeur de retour de la méthode EntreeDeNombre.
-            // Prenez note que la méthode EntreeDeNombre prend deux arguments sous formes de strings
+            // Déclarer, puis initialiser une variable int à partir de la valeur de retour de la méthode EntreeDeNombre
             int nombre = EntreeDeNombre(MESSAGES_DERREUR[0], MESSAGES_DERREUR[1]);
 
             // Afficher le 2ième message prédéfini et le nombre saisi précédement
@@ -90,14 +90,14 @@ namespace MonProjet
 
             // Début de la déclaration des méthodes de la technique 1
 
-            // Méthode AffichageDuMessage, qui ne retourne pas de valeur (void)
+            /* Méthode AffichageDuMessage, qui prend un string msgNormal comme argument et qui ne retourne pas de valeur (void) */
             void AffichageDuMessage(string msgNormal)
             {
                 // Afficher le message
                 Console.WriteLine(msgNormal);
             }
 
-            // Méthode EntreeDeNombre, avec un retour de nombre entier (int)
+            /* Méthode EntreeDeNombre, qui prend un string msgErreur1 et un string msgErreur2 comme argument, et qui retourne un nombre entier (int) */
             int EntreeDeNombre(string msgErreur1, string msgErreur2)
             {
                 // Déclarer, puis initialiser la variable nbr avec la valeur 0
@@ -136,7 +136,7 @@ namespace MonProjet
                 return nbr;
             }
 
-            // Méthode AffichageDuTexte, qui ne retourne pas de valeur (void)
+            /* Méthode AffichageDuTexte, qui prend un string msgNormal et un int nbr comme argument, et qui ne retourne pas de valeur (void) */
             void AffichageDuTexte(string msgNormal, int nbr)
             {
                 // Afficher le message
@@ -167,8 +167,7 @@ namespace MonProjet
             // Afficher le 1er message prédéfini
             MaClasseStatique.AffichageDuMessage2(MESSAGES_NORMAUX_2[0]);
 
-            // Déclarer, puis initialiser une variable int à partir de la valeur de retour de la méthode EntreeDeNombre2.
-            // Prenez note que la méthode EntreeDeNombre2 prend deux arguments sous formes de strings
+            // Déclarer, puis initialiser une variable int à partir de la valeur de retour de la méthode EntreeDeNombre2
             int nombre2 = MaClasseStatique.EntreeDeNombre2(MESSAGES_DERREUR_2[0], MESSAGES_DERREUR_2[1]);
 
             // Afficher le 2ième message prédéfini, de même que le nombre saisi précédement
