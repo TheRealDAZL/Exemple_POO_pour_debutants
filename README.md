@@ -1,11 +1,11 @@
 # Exemple-de-POO-pour-les-debutants
 Voici une démonstration simple pour les débutants en C#, afin de comparer un exemple de programmation procédurale avec deux exemples de programmation orientée objet. J'y ai inclus beaucoup de commentaires et de documentation.
 
-Lorsque l'on teste mon programme, on s'aperçoit qu'il y a 3 techniques équivalentes pour arriver au même résultat observable. Ce résultat observable est généré en 3 étapes :
+Lorsque l'on teste mon programme, on s'aperçoit qu'il y a 3 techniques équivalentes pour arriver au même résultat observable. Ce résultat observable est içi généré en 3 étapes :
 
 1) Afficher un message;
-2) Entrer une valeur numérique, puis la valider;
+2) Entrer une valeur numérique, la valider, puis retourner la valeur entrée;
 3) Afficher un message, puis afficher la valeur numérique entrée précédemment.
 
 Voici le résultat de mes jeux d'essai :
-![Jeux_dessai](https://github.com/TheRealDAZL/Exemple-de-POO-pour-les-debutants/assets/116024728/afb4d658-0cd8-4588-9f98-b3e0ea1fd13a)
+![Jeux_dessai](https://github.com/TheRealDAZL/Exemple-de-POO-pour-les-debutants/assets/116024728/f87211df-2edc-405a-a9dc-e363a5ee31f8)
